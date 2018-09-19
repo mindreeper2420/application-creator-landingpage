@@ -437,7 +437,6 @@
                     </div>
                     <span class="input-group-addon" id="httpEndpoint1GetInput-addon" style="width: 100px; text-align: left;">Hello,
                     </span>
-                    <!-- <input type="text" class="form-control" disabled placeholder="Hello, "> -->
                     <input type="text" id="httpEndpoint1GetInput" class="form-control" value="World" placeholder="World">
                   </div>
                 </div>
@@ -469,18 +468,192 @@
           </div>
         </div>
       </div>
-    </div>
+      <div class="row">
+        <a name="database"></a>
+        <div class="col-sm-12">
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <h3 class="panel-title">
+                <i class="fa fa-database"></i>
+                Relational Database
+              </h3>
+            </div>
+            <div class="panel-body">
+              <div class="row">
+                <div class="col-sm-2">
+                  <img src="img/postgresql.png" class="img-responsive" alt="PostgreSQL">
+                </div>
+                <div class="col-sm-10">
+                  <h2>PostgreSQL</h2>
+                  <p>PostgreSQL, often simply Postgres, is an object-relational
+                    database management system with an emphasis on extensibility and
+                    standards compliance.</p>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-sm-3 col-sm-offset-2">
+                  <b>Username</b>
+                </div>
+                <div class="col-sm-7">
+                  <samp>
+                    admin
+                  </samp>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-sm-3 col-sm-offset-2">
+                  <b>Password</b>
+                </div>
+                <div class="col-sm-7">
+                  <samp>
+                    password
+                  </samp>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-sm-3 col-sm-offset-2">
+                  <b>Deployment</b>
+                </div>
+                <div class="col-sm-7">
+                  <samp>
+                    <a href="#" target="_blank" data-toggle="tooltip" title="View DB deployment on OpenShift">http://youropenshift.com/console/deployment/db
+                      <i class="fa fa-external-link-square"></i></a>
+                  </samp>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-sm-3 col-sm-offset-2">
+                  <b>Image</b>
+                </div>
+                <div class="col-sm-7">
+                  <samp>
+                    openshift/postgresql-92-centos7<br />
+                    <p class="small">
+                      <a href="#" target="_blank" data-toggle="tooltip" title="Link to information about this image in the catalog">Learn
+                        more <i class="fa fa-external-link-square"></i></a>
+                    </p>
+                  </samp>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-sm-10 col-sm-offset-2">
+                  <p>
+                    For security purposes, this database instance is not currently
+                    exposed to the world outside OpenShift. To do that, you may define a
+                    route <a href="#" target="_blank">here <i class="fa fa-external-link-square"></i></a>.
+                    <span class="text-danger small">ALR Note: factor in discussion of Secrets or ConfigMap here
+                      to note how the user/pass info is managed? How about a link to documentation on how to
+                      change the user/pass and be sure the configs are updated to use the new auth data?</span>
+                  </p>
+                </div>
+              </div>
+              <hr>
+              <div class="row">
+                <div class="col-sm-12">
+                  <p>
+                    As a starting point for your development, we have created a
+                    <samp>Fruits</samp> table and populated it with some
+                    data. We've additionally exposed CRUD operations via the following endpoints
+                    to give you a system that works end to end.
+                  </p>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-sm-2">
+                  <b>Swagger URL</b>
+                </div>
+                <div class="col-sm-10">
+                  <samp>
+                    <a href="#" target="_blank" data-toggle="tooltip" title="Interactive Swagger documentation">http://somedomain.com/swagger-ui.html
+                      <i class="fa fa-external-link-square"></i></a>
+                  </samp>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-sm-2">
+                  <b>JSON Spec</b>
+                </div>
+                <div class="col-sm-10">
+                  <samp>
+                    <a href="#" target="_blank" data-toggle="tooltip" title="JSON Specification for consumption by integration services such as Fuse">http://somedomain.com/api-docs
+                      <i class="fa fa-external-link-square"></i></a>
+                  </samp>
+                </div>
+              </div>
+              <hr>
+              <div class="row">
+                <div class="col-sm-2">
+                  <b>
+                    <a href="#" target="_blank" data-toggle="tooltip" title="View source on GitHub">FruitController
+                      <i class="fa fa-external-link-square"></i></a>
+                  </b>
+                </div>
+                <div class="col-sm-2">
+                  <samp>
+                    /api/db/fruits
+                  </samp>
+                </div>
+                <div class="col-sm-4">
+                  <button id="dbEndpoint1GetButton" class="btn btn-info" type="button" data-toggle="tooltip" title="Execute GET request">
+                    GET
+                  </button>
+                  <div class="input-group">
+                    <span class="input-group-btn">
+                      <button class="btn btn-success" id="dbEndpoint1PostButton" type="button" title="Execute POST request">POST</button>
+                    </span>
+                    <input type="text" id="dbEndpoint1PostInput" class="form-control" placeholder="Fruit to add">
+                  </div>
+                </div>
+                <div class="col-sm-4">
+                  <textarea id="dbEndpoint1Console" class="healthcheck-textarea" rows="5" cols="35" disabled></textarea>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-sm-2 col-sm-offset-2">
+                  <samp>
+                    /api/db/fruits/{id}
+                  </samp>
+                </div>
+                <div class="col-sm-4">
+                  <div class="col-sm-12">
+                    <div class="input-group">
+                      <span class="input-group-btn">
+                        <button id="dbEndpoint2PutButton" class="btn btn-warning" type="button" data-toggle="tooltip"
+                          title="Execute GET request">
+                          PUT
+                        </button>
+                      </span>
+                      <div class="col-sm-6 padding-0">
+                        <input type="text" id="dbEndpoint2PutInput1" class="small form-control" placeholder="ID">
+                      </div>
+                      <div class="col-sm-6 padding-0">
+                        <input type="text" id="dbEndpoint2PutInput2" class="small form-control" placeholder="New value">
+                      </div>
+                    </div>
+                    <div class="input-group">
+                      <span class="input-group-btn">
+                        <button id="dbEndpoint2DeleteButton" data-toggle="tooltip" title="Delete the selected ID" class="btn btn-danger">DELETE</button>
+                      </span>
+                      <input type="text" id="dbEndpoint2DeleteInput" class="small form-control" placeholder="ID">
+                    </div>
+                  </div>
+                </div>
+                <div class="col-sm-4">
+                  <textarea id="dbEndpoint2Console" class="healthcheck-textarea" rows="5" cols="35" disabled></textarea>
+                </div>
+              </div>
+            </div>
 
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
-      crossorigin="anonymous"></script>
-    <script src="js/core.js"></script>
-    <script src="js/health-check.js"></script>
-    <script src="js/http-endpoints.js"></script>
-    <script src="js/relational-database.js"></script>
-    <script src="js/messaging.js"></script>
+            <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+            <!-- Include all compiled plugins (below), or include individual files as needed -->
+            <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+              crossorigin="anonymous"></script>
+            <script src="js/core.js"></script>
+            <script src="js/health-check.js"></script>
+            <script src="js/http-endpoints.js"></script>
+            <script src="js/relational-database.js"></script>
+            <script src="js/messaging.js"></script>
   </body>
 
 </html>
