@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Red Hat | Application Start Page</title>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+      crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/patternfly/3.54.4/css/patternfly.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/patternfly/3.54.4/css/patternfly-additions.min.css">
+    <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12">
+          <h1>Here we go.</h1>
+          <p>Congratulations; we've together built a working
+            system of application code and services running on the
+            OpenShift platform. Everything is hooked together for
+            you to bring your ideas to life.</p>
+
+          <p>Let's explore what's available.</p>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12">
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <h3 class="panel-title">
+                <i class="fa fa-cloud"></i>
+                Cloud Deployment
+              </h3>
+            </div>
+            <div class="panel-body">
+              <div class="row">
+                <div class="col-sm-2">
+                  <img src="img/openshift.png" class="img-responsive" alt="OpenShift">
+                </div>
+                <div class="col-sm-10">
+                  This system is deployed on the OpenShift Cloud Platform, a Kubernetes distribution which builds and
+                  runs the applications and services we've created.
+                </div>
+              </div>
+              <hr>
+              <div class="row">
+                <div class="col-sm-3">
+                  <b>Application URL</b>
+                </div>
+                <div class="col-sm-9">
+                  <samp>
+                    <a href="#" target="_blank">https://youropenshiftcluster.com/application
+                      <i class="fa fa-external-link-square"></i>
+                    </a>
+                  </samp>
+                  <p>
+                    The link to this application running live on OpenShift
+                  </p>
+                </div>
+              </div>
+              <hr>
+              <div class="row">
+                <div class="col-sm-3">
+                  <b>OpenShift Console URL</b>
+                </div>
+                <div class="col-sm-9">
+                  <samp>
+                    <a href="#" target="_blank">https://youropenshiftcluster.com/console/namespace
+                      <i class="fa fa-external-link-square"></i>
+                    </a>
+                  </samp>
+                  <p>
+                    Link to manage the OpenShift instance where this application is deployed.
+                  </p>
+                </div>
+              </div>
+              <hr>
+              <div class="row">
+                <div class="col-sm-3">
+                  <b>Capabilities Created</b>
+                </div>
+                <div class="col-sm-9">
+                  <div class="btn-group-vertical" role="group" aria-label="capabilities">
+                    <a href="#codebase" class="btn btn-lg btn-info"><i class="fa fa-code"></i> Runtime Application -
+                      Eclipse Vert.x</a>
+                    <a href="#healthchecks" class="btn btn-lg btn-info"><i class="fa fa-medkit"></i>
+                      Health Checks</a>
+                    <a href="#endpoints" class="btn btn-lg btn-info"><i class="fa fa-plug"></i> HTTP API Endpoints</a>
+                    <a href="#database" class="btn btn-lg btn-info"><i class="fa fa-database"></i> Database -
+                      PostgreSQL</a>
+                    <a href="#messaging" class="btn btn-lg btn-info"><i class="fa fa-envelope-open"></i> Message
+                      Broker - Red Hat AMQ</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <a name="codebase"></a>
+        <div class="col-sm-12">
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <h3 class="panel-title">
+                <i class="fa fa-code"></i>
+                Codebase
+              </h3>
+            </div>
+            <div class="panel-body">
+              <div class="row">
+                <div class="col-sm-2">
+                  <img src="img/vertx.jpg" class="img-responsive" alt="Eclipse Vert.x">
+                </div>
+                <div class="col-sm-10">
+                  <h2 class="mt-0">Java - Eclipse Vert.x</h2>
+                  <p>Eclipse Vert.x is a tool-kit for building reactive applications on the JVM.</p>
+                  <p>Your codebase has been customized to hook into the services selected during generation. All
+                    capabilities are functional end-to-end for you to explore.</p>
+                </div>
+              </div>
+              <hr>
+              <div class="row">
+                <div class="col-sm-2">
+                  <b>Version</b>
+                </div>
+                <div class="col-sm-10">
+                  <p>
+                    Vert.x RHOAR 1.0.0
+                  </p>
+                </div>
+              </div>
+              <hr>
+              <div class="row">
+                <div class="col-sm-2">
+                  <b><i class="fa fa-git"></i> Git URL</b>
+                </div>
+                <div class="col-sm-10">
+                  <p>
+                    <samp>git://someone@github.com/whatever/somewhere</samp> <button class="btn btn-success"><i class="fa fa-clipboard"></i></button>
+                  </p>
+                  <p>
+                    You may use the <samp>git</samp> command-line
+                    client (or other preferred tooling) to clone this repository locally.
+                    <div class="input-group">
+                      <div class="input-group-addon">
+                        shell$>
+                      </div>
+                      <input type="text" class="form-control" disabled value="git clone git://someone@github.com/whatever/somewhere">
+                      <div class="input-group-btn">
+                        <button class="btn btn-success" type="button" data-toggle="tooltip" title="Copy shell command">
+                          <i class="fa fa-clipboard"></i>
+                        </button>
+                      </div>
+                    </div>
+                  </p>
+                </div>
+              </div>
+              <hr>
+              <div class="row">
+                <div class="col-sm-2">
+                  <b><i class="fa fa-github"></i> GitHub URL</b>
+                </div>
+                <div class="col-sm-10">
+                  <p>
+                    <samp>
+                      <a href="https://github.com/redhat-developer" target="_blank">
+                        https://github.com/redhat-developer <i class="fa fa-external-link-square"></i>
+                      </a>
+                    </samp>
+                  </p>
+                </div>
+              </div>
+              <hr>
+              <div class="row">
+                <div class="col-sm-2">
+                  <b><i class="fa fa-github"></i> GitHub Webhooks</b>
+                </div>
+                <div class="col-sm-10">
+                  <p>
+                    <samp>
+                      <a href="https://github.com/" target="_blank">
+                        https://github.com/redhat-developer/somerepo/settings/hooks <i class="fa fa-external-link-square"></i>
+                      </a>
+                    </samp>
+                  </p>
+                  <p>
+                    Pushes to the master branch of this repository will trigger a build and deployment of the updated
+                    codebase on OpenShift.
+                  </p>
+                </div>
+              </div>
+              <hr>
+              <div class="row">
+                <div class="col-sm-2">
+                  <b>Base Image</b>
+                </div>
+                <div class="col-sm-10">
+                  <p>
+                    <samp>
+                      rht/java-s2i
+                    </samp>
+                  </p>
+                  <p>
+                    This is the base image used when containerizing the codebase to run on OpenShift.
+                    <a href="#" target="_blank" data-toggle="tooltip" title="Link to information about this image in the catalog">Learn
+                      more <i class="fa fa-external-link-square"></i></a>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <a name="healthchecks"></a>
+        <div class="col-sm-12">
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <h3 class="panel-title">
+                <i class="fa fa-medkit"></i>
+                Health Checks
+              </h3>
+            </div>
+            <div class="panel-body">
+              <div class="row">
+                <div class="col-sm-12">
+                  <p>
+                    Health checks are HTTP endpoints that the codebase exposes
+                    for the purpose of monitoring. OpenShift will periodically hit these
+                    to determine that the container is functioning properly. If not, it may kill
+                    and/or restart the pod to maintain the targeted number of instances configured to be running.
+                  </p>
+                  <p>
+                    Your application has been set up with the following Health Checks.
+                  </p>
+                  <p>
+                    <a href="#" target="_blank" data-toggle="tooltip" title="Visit Health Checks on OpenShift Documentation">
+                      Learn more <i class="fa fa-external-link-square"></i>
+                    </a>
+                  </p>
+                </div>
+              </div>
+              <hr>
+              <div class="row">
+                <div class="col-sm-2">
+                  <b>Liveness</b>
+                </div>
+                <div class="col-sm-3">
+                  <samp>
+                    GET /api/health/liveness
+                  </samp>
+                </div>
+                <div class="col-sm-7">
+                  <div class="btn-group-vertical" role="group" aria-label="GET Check" style="vertical-align: top;">
+                    <button id="hcLivenessExecuteButton" class="btn btn-success" type="button">
+                      Execute <i class="fa fa-play"></i>
+                    </button>
+                    <button id="hcLivenessClearButton" class="btn btn-danger" type="button">
+                      Clear <i class="fa fa-stop"></i>
+                    </button>
+                  </div>
+                  <textarea id="hcLivenessServerResponseConsole" class="healthcheck-textarea" cols="35" rows="5"
+                    disabled></textarea>
+                  <p>
+                    The source for this endpoint may be found in your codebase
+                    at <samp><a href="#" target="_blank" data-toggle="tooltip" data-placement="bottom" title="Open in GitHub">
+                        HealthCheckEndpoints.java <i class="fa fa-external-link-square"></i></a></samp>
+                  </p>
+                  <p>
+                    You may test this directly by making an
+                    <samp>HTTP GET</samp> request using this
+                    application's URL as root. For instance, try with the
+                    <samp>cURL</samp> tool:
+                    <div class="input-group">
+                      <div class="input-group-addon">
+                        shell$>
+                      </div>
+                      <input type="text" class="form-control" disabled value="curl http://whateveropenshiftdomain.com/app/api/health/liveness">
+                      <div class="input-group-btn">
+                        <button class="btn btn-success" type="button" data-toggle="tooltip" title="Copy shell command">
+                          <i class="fa fa-clipboard"></i>
+                        </button>
+                      </div>
+                    </div>
+                  </p>
+                </div>
+              </div>
+              <hr>
+              <div class="row">
+                <div class="col-sm-2">
+                  <b>Readiness</b>
+                </div>
+                <div class="col-sm-3">
+                  <samp>
+                    GET /api/health/readiness
+                  </samp>
+                </div>
+                <div class="col-sm-7">
+                  <div class="btn-group-vertical" role="group" aria-label="GET Check" style="vertical-align: top;">
+                    <button id="hcReadinessExecuteButton" class="btn btn-success" type="button">
+                      Execute <i class="fa fa-play"></i>
+                    </button>
+                    <button id="hcReadinessClearButton" class="btn btn-danger" type="button">
+                      Clear <i class="fa fa-stop"></i>
+                    </button>
+                  </div>
+                  <textarea id="hcReadinessServerResponseConsole" class="healthcheck-textarea" cols="35" rows="5"
+                    disabled></textarea>
+                  <p>
+                    The source for this endpoint may be found in your codebase
+                    at <samp><a href="#" target="_blank" data-toggle="tooltip" data-placement="bottom" title="Open in GitHub">
+                        HealthCheckEndpoints.java <i class="fa fa-external-link-square"></i></a></samp>
+                  </p>
+                  <p>
+                    You may test this directly by making an
+                    <samp>HTTP GET</samp> request using this
+                    application's URL as root. For instance, try with the
+                    <samp>cURL</samp> tool:
+                    <div class="input-group">
+                      <div class="input-group-addon">
+                        shell$>
+                      </div>
+                      <input type="text" class="form-control" disabled value="curl http://whateveropenshiftdomain.com/app/api/health/readiness">
+                      <div class="input-group-btn">
+                        <button class="btn btn-success" type="button" data-toggle="tooltip" title="Copy shell command">
+                          <i class="fa fa-clipboard"></i>
+                        </button>
+                      </div>
+                    </div>
+                  </p>
+                </div>
+              </div>
+              <hr>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+      crossorigin="anonymous"></script>
+    <script src="js/core.js"></script>
+    <script src="js/health-check.js"></script>
+    <script src="js/http-endpoints.js"></script>
+    <script src="js/relational-database.js"></script>
+    <script src="js/messaging.js"></script>
+  </body>
+
+</html>
