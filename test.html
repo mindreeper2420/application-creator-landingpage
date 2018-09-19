@@ -161,7 +161,7 @@
                       <div class="input-group-addon">
                         shell$>
                       </div>
-                      <input type="text" class="form-control" disabled placeholder="git clone git://someone@github.com/whatever/somewhere">
+                      <input type="text" class="form-control" readonly placeholder="git clone git://someone@github.com/whatever/somewhere">
                       <div class="input-group-btn">
                         <button class="btn btn-success" type="button" data-toggle="tooltip" title="Copy shell command">
                           <i class="fa fa-clipboard"></i>
@@ -291,7 +291,7 @@
                       <div class="input-group-addon">
                         shell$>
                       </div>
-                      <input type="text" class="form-control" disabled placeholder="curl http://whateveropenshiftdomain.com/app/api/health/liveness">
+                      <input type="text" class="form-control" readonly placeholder="curl http://whateveropenshiftdomain.com/app/api/health/liveness">
                       <div class="input-group-btn">
                         <button class="btn btn-success" type="button" data-toggle="tooltip" title="Copy shell command">
                           <i class="fa fa-clipboard"></i>
@@ -336,7 +336,7 @@
                       <div class="input-group-addon">
                         shell$>
                       </div>
-                      <input type="text" class="form-control" disabled placeholder="curl http://whateveropenshiftdomain.com/app/api/health/readiness">
+                      <input type="text" class="form-control" readonly placeholder="curl http://whateveropenshiftdomain.com/app/api/health/readiness">
                       <div class="input-group-btn">
                         <button class="btn btn-success" type="button" data-toggle="tooltip" title="Copy shell command">
                           <i class="fa fa-clipboard"></i>
@@ -455,7 +455,7 @@
                     <div class="input-group-addon">
                       shell$>
                     </div>
-                    <input type="text" class="form-control" disabled value="curl http://whateveropenshiftdomain.com/app/api/greeting">
+                    <input type="text" class="form-control" readonly value="curl http://whateveropenshiftdomain.com/app/api/greeting">
                     <div class="input-group-btn">
                       <button class="btn btn-success" type="button" data-toggle="tooltip" title="Copy shell command">
                         <i class="fa fa-clipboard"></i>
@@ -643,17 +643,200 @@
                 </div>
               </div>
             </div>
-
-            <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-            <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-            <!-- Include all compiled plugins (below), or include individual files as needed -->
-            <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
-              crossorigin="anonymous"></script>
-            <script src="js/core.js"></script>
-            <script src="js/health-check.js"></script>
-            <script src="js/http-endpoints.js"></script>
-            <script src="js/relational-database.js"></script>
-            <script src="js/messaging.js"></script>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <a name="messaging"></a>
+        <div class="col-sm-12">
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <h3 class="panel-title">
+                <i class="fa fa-envelope-open"></i>
+                Messaging
+              </h3>
+            </div>
+            <div class="panel-body">
+              <div class="row">
+                <div class="col-sm-2">
+                  <img src="img/amq.png" class="img-responsive" alt="Red Hat AMQ">
+                </div>
+                <div class="col-sm-10">
+                  <p>
+                    AMQ provides fast, lightweight, and secure messaging for Internet-scale
+                    applications. <a class="small" href="https://developers.redhat.com/products/amq/overview/" target="_blank">Learn
+                      more at developers.redhat.com.
+                      <i class="fa fa-external-link-square"></i></a>
+                  </p>
+                  <p>
+                    This application contains the following messaging destinations. For your
+                    convenince, we have provided mechanisms to both publish and listen to them,
+                    so you're all hooked up.
+                  </p>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-sm-2">
+                  <b>Broker</b>
+                </div>
+                <div class="col-sm-3">
+                  <b>Console URL</b>
+                </div>
+                <div class="col-sm-7">
+                  <samp>
+                    <a href="#" target="_blank">http://console-amq.192.168.42.114.nip.io <i class="fa fa-external-link-square"></i></a>
+                  </samp>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-sm-3 col-sm-offset-2">
+                  <b>Username</b>
+                </div>
+                <div class="col-sm-7">
+                  <samp>
+                    admin
+                  </samp>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-sm-3 col-sm-offset-2">
+                  <b>Password</b>
+                </div>
+                <div class="col-sm-7">
+                  <samp>
+                    admin
+                  </samp>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-sm-3 col-sm-offset-2">
+                  <b>Image</b>
+                </div>
+                <div class="col-sm-7">
+                  <samp>
+                    amq-broker-7-tech-preview/amq-broker-71-openshift
+                  </samp>
+                  <br>
+                  <p class="small">
+                    <a href="#" target="_blank" data-toggle="tooltip" title="Link to information about this image in the catalog">Learn
+                      more <i class="fa fa-external-link-square"></i></a>
+                  </p>
+                </div>
+              </div>
+              <hr>
+              <div class="row">
+                <div class="col-sm-3">
+                  <b>Topics</b>
+                </div>
+                <div class="col-sm-9">
+                  <i>Topics</i> implement the publish/subscribe model of messaging. Many
+                  listeners may be subscribed to a topic at once, and all may receive
+                  the message. This is a pattern well-suited to the broadcast of information.
+                  If a listener is unsubscribed at the time a message is sent to the topic, it
+                  will not receive that particular message.
+                  <p class="small">
+                    <a href="#" target="_blank">Learn
+                      more <i class="fa fa-external-link-square"></i></a> about topics.
+                  </p>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-sm-3 col-sm-offset-3">
+                  <samp>/newsAlerts</samp>
+                </div>
+                <div class="col-sm-6">
+                  <form>
+                    <div class="form-group">
+                      <label for="messageTopic1Input">Publisher</label>
+                      <div class="input-group">
+                        <input type="email" class="form-control" id="messageTopic1Input" placeholder="Email">
+                        <span class="input-group-btn">
+                          <button id="messageTopic1ExecuteButton" class="btn btn-success">Publish
+                            <i class="fa fa-play"></i></button>
+                        </span>
+                      </div>
+                      <p class="help-block">The source for this publisher may be found in your codebase
+                        at <samp><a href="#" target="_blank" data-toggle="tooltip" data-placement="bottom" title="Open in GitHub">NewsAlertPublisher.java
+                            <i class="fa fa-external-link-square"></i></a></samp>
+                      </p>
+                    </div>
+                    <div class="form-group">
+                      <label for="messageTopic1Listener">Subscriber</label>
+                      <textarea id="messageTopic1Listener" class="healthcheck-textarea small full-width" rows="5"
+                        readonly></textarea>
+                      <p class="small">
+                        The source for this listener may be found in your codebase
+                        at <samp><a href="#" target="_blank" data-toggle="tooltip" data-placement="bottom" title="Open in GitHub">NewsAlertListener.java
+                            <i class="fa fa-external-link-square"></i></a></samp>
+                      </p>
+                    </div>
+                  </form>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-sm-3">
+                  <b>Queues</b>
+                </div>
+                <div class="col-sm-9">
+                  <i>Queues</i> define a point-to-point messaging model. There may be many listeners
+                  upon a queue, but a message will only be processed by one of them. Messages
+                  remain on the queue until processed.
+                  <p class="small">
+                    <a href="#" target="_blank">Learn
+                      more <i class="fa fa-external-link-square"></i></a> about queues.
+                  </p>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-sm-3 col-sm-offset-3">
+                  <samp>/workOrder</samp>
+                </div>
+                <div class="col-sm-6">
+                  <form>
+                    <div class="form-group">
+                      <label for="messageQueue1Input">Producer</label>
+                      <div class="input-group">
+                        <input type="email" class="form-control" id="messageQueue1Input" placeholder="Email">
+                        <span class="input-group-btn">
+                          <button id="messageQueue1ExecuteButton" class="btn btn-success">Enqueue
+                            <i class="fa fa-play"></i></button>
+                        </span>
+                      </div>
+                      <p class="help-block">The source for this producer may be found in your codebase
+                        at <samp><a href="#" class="text-monospace" target="_blank" data-toggle="tooltip"
+                            data-placement="bottom" title="Open in GitHub">WorkOrderProducer.java
+                            <i class="fa fa-external-link-square"></i></a></samp>
+                      </p>
+                    </div>
+                    <div class="form-group">
+                      <label for="messageQueue1Listener">Consumer</label>
+                      <textarea id="messageQueue1Listener" class="healthcheck-textarea small full-width" rows="5"
+                        readonly></textarea>
+                      <p class="help-block">
+                        The source for this listener may be found in your codebase
+                        at <samp><a href="#" class="text-monospace" target="_blank" data-toggle="tooltip"
+                            data-placement="bottom" title="Open in GitHub">WorkOrderListener.java
+                            <i class="fa fa-external-link-square"></i></a></samp>
+                      </p>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+      crossorigin="anonymous"></script>
+    <script src="js/core.js"></script>
+    <script src="js/health-check.js"></script>
+    <script src="js/http-endpoints.js"></script>
+    <script src="js/relational-database.js"></script>
+    <script src="js/messaging.js"></script>
   </body>
 
 </html>
